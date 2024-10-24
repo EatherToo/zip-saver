@@ -19,11 +19,6 @@ export async function createZip(fileList: FileLike[]) {
   const centralDirectoryFileHeader =
     CentraDirectoryFileHeader.generateHeader(zipSubFileList)
 
-  const zipFileSize =
-    zipSubFileList.reduce((acc, zipSubFile) => {
-      return acc + zipSubFile.getOffset()
-    }, 0) + centralDirectoryFileHeader.byteLength
-
   const bufferList = zipSubFileList.map((zipSubFile) => {
     return zipSubFile.getUint8()
   })

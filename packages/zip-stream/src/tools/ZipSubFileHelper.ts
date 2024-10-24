@@ -1,4 +1,5 @@
 import BufferDataView from './BufferDataView'
+import Crc32 from './Crc32'
 
 export interface ZipSubFileHelperInitOptions {
   name: string
