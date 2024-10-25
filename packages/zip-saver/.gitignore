@@ -1,3 +1,6 @@
 node_modules
 .history
 dist
+README.md
+README_cn.md
+LICENSE

@@ -2,7 +2,13 @@
     用<code>javascript</code>将多个文件合并为一个zip文件
 </h1>
 
+[![NPM version]][npm-url]
+[![Downloads per month]][downloads-url]
+
+---
+
 [online demo](https://codesandbox.io/p/devbox/2vxncf)
+[example](https://github.com/EatherToo/zip-saver/blob/master/apps/example/src/App.vue)
 
 #### 安装
 
@@ -112,3 +118,7 @@ const fetchTwoFileToZip = async () => {
 
 - [ ] 加密压缩
 - [ ] 压缩算法
+
+[npm-url]: https://www.npmjs.com/package/zip-saver
+[NPM version]: https://img.shields.io/npm/v/zip-saver?style=flat-square
+[downloads-url]: https://www.npmjs.com/package/zip-saver

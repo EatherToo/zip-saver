@@ -2,7 +2,13 @@
     Easy way to merge multiple files into one zip file in <code>javascript</code>
 </h1>
 
+[![NPM version]][npm-url]
+[![Downloads per month]][downloads-url]
+
+---
+
 [online demo](https://codesandbox.io/p/devbox/2vxncf)
+[example](https://github.com/EatherToo/zip-saver/blob/master/apps/example/src/App.vue)
 
 #### install
 
@@ -113,3 +119,7 @@ pnpm add zip-saver
 
 - [ ] encrypt compress
 - [ ] compression algorithm
+
+[npm-url]: https://www.npmjs.com/package/zip-saver
+[NPM version]: https://img.shields.io/npm/v/zip-saver?style=flat-square
+[downloads-url]: https://www.npmjs.com/package/zip-saver

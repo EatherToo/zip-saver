@@ -1,6 +1,6 @@
 {
   "name": "zip-saver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/index.cjs",
   "module": "dist/index.esm.js",
@@ -8,9 +8,16 @@
   "scripts": {
     "test": "jest",
     "build": "rollup -c --bundleConfigAsCjs",
-    "dev": "rollup -c --bundleConfigAsCjs -w"
+    "dev": "rollup -c --bundleConfigAsCjs -w",
+    "publish_pkg": "cp ../../README.md . && cp ../../README_cn.md . && cp ../../LICENSE . && npm run build && npm publish"
   },
-  "keywords": [],
+  "keywords": [
+    "zip",
+    "saver",
+    "zip-saver",
+    "javascript zip",
+    "zip file"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,9 +26,9 @@
   "files": [
     "dist",
     "package.json",
-    "../../LICENSE",
-    "../../README.md",
-    "../../README_cn.md"
+    "LICENSE",
+    "README.md",
+    "README_cn.md"
   ],
   "devDependencies": {
     "@jest/globals": "^29.7.0",
