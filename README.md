@@ -3,7 +3,8 @@
 </h1>
 
 [![NPM version]][npm-url]
-[![Downloads per month]][downloads-url]
+
+[English] [Chinese](README_cn.md)
 
 ---
 
