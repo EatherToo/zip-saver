@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { createZip, createZipStream } from 'zip-stream'
+import { createZip, createZipStream } from 'zip-saver'
 const handleFileChange = async (event: Event) => {
   const files = (event.target as HTMLInputElement).files
   if (!files) return
@@ -58,12 +58,6 @@ const fetchTwoFileToZip = async () => {
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
     <input multiple type="file" @change="handleFileChange" />
     <button @click="fetchTwoFileToZip">Fetch two files and zip</button>
   </div>

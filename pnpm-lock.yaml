@@ -12,10 +12,10 @@ importers:
       vite: ^5.4.9
       vue: ^3.5.12
       vue-tsc: ^2.1.6
-      zip-stream: workspace:*
+      zip-saver: workspace:*
     dependencies:
       vue: 3.5.12_typescript@5.6.3
-      zip-stream: link:../../packages/zip-stream
+      zip-saver: link:../../packages/zip-stream
     devDependencies:
       '@vitejs/plugin-vue': 5.1.4_vite@5.4.10+vue@3.5.12
       typescript: 5.6.3

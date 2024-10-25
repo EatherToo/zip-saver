@@ -1,7 +1,8 @@
 {
-  "name": "zip-stream-repo",
+  "name": "zip-saver-repo",
   "version": "0.0.1",
   "description": "",
   "keywords": [],
+  "license": "ISC",
   "author": "EatherToo"
 }

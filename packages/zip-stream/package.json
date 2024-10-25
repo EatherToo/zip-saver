@@ -1,6 +1,6 @@
 {
-  "name": "zip-stream",
-  "version": "0.0.1",
+  "name": "zip-saver",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/index.cjs",
   "module": "dist/index.esm.js",
