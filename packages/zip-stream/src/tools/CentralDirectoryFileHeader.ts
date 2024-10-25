@@ -18,7 +18,11 @@ export default class CentraDirectoryFileHeader {
 
     // 22 is base end of central directory record length (EOCD)
     const bufferDataView = new BufferDataView(wholeLength + 22)
-    for (let i = 0, offset = 0; i < zipSubFileList.length; i++) {
+    for (
+      let i = 0, offset = 0, entryOffset = 0;
+      i < zipSubFileList.length;
+      i++
+    ) {
       const zipSubFile = zipSubFileList[i]
       // signature
       bufferDataView.setUint32(offset, 0x02014b50)
@@ -34,7 +38,7 @@ export default class CentraDirectoryFileHeader {
       bufferDataView.setUint16(offset + 32, commentBuffer.length)
 
       // local file header offset
-      bufferDataView.setUint32(offset + 42, zipSubFile.getOffset())
+      bufferDataView.setUint32(offset + 42, entryOffset)
       const filenameBuffer = textEncoder.encode(zipSubFile.name)
       // filename
       bufferDataView.setBuffer(offset + 46, filenameBuffer)
@@ -45,6 +49,7 @@ export default class CentraDirectoryFileHeader {
       )
 
       offset += 46 + commentBuffer.length + filenameBuffer.length
+      entryOffset += zipSubFile.getOffset()
     }
 
     // EOCD

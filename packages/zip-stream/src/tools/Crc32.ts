@@ -1,12 +1,12 @@
 export default class Crc32 {
   constructor() {
-    this.crc = -1
+    this.crc = 0xffffffff
   }
 
   private crc: number
 
   static table: number[] = (() => {
-    let table = new Array<number>(256)
+    const table = new Array<number>(256)
     for (let i = 0; i < 256; i++) {
       let crc = i
       for (let j = 0; j < 8; j++) {
@@ -19,7 +19,7 @@ export default class Crc32 {
 
   append(data: Uint8Array): void {
     let crc = this.crc | 0
-    let table = Crc32.table
+    const table = Crc32.table
     for (let i = 0; i < data.length; i++) {
       crc = (crc >>> 8) ^ table[(crc ^ data[i]) & 0xff]
     }

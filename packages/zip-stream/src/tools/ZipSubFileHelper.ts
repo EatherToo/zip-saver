@@ -8,7 +8,7 @@ export interface ZipSubFileHelperInitOptions {
   comment?: string
   compressedLength?: number
   uncompressedLength?: number
-  originBlob: Blob
+  originBlob?: Blob
   lastModified?: number
 }
 
@@ -19,7 +19,7 @@ export default class ZipSubFileHelper {
   comment: string
   compressedLength: number
   uncompressedLength: number
-  originBlob: Blob
+  originBlob?: Blob
   lastModified: number
   extraFiledLength?: number
   extraFiled?: Uint8Array
@@ -122,7 +122,7 @@ export default class ZipSubFileHelper {
   }
 
   private closed = false
-  finish() {
+  private finish() {
     if (this.closed) {
       throw new Error('this file is already closed')
     }
@@ -134,9 +134,21 @@ export default class ZipSubFileHelper {
     if (this.closed) {
       throw new Error('this file is already closed')
     }
+    if (!this.originBlob) {
+      throw new Error('this file is empty')
+    }
     this.append(new Uint8Array(await this.originBlob.arrayBuffer()))
     this.finish()
     return this
+  }
+
+  closeStream() {
+    if (this.closed) {
+      throw new Error('this file is already closed')
+    }
+
+    this.finish()
+    return this.dataDescriptor!
   }
 
   getUint8() {
