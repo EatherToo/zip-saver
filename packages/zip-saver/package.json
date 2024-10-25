@@ -18,7 +18,10 @@
   },
   "files": [
     "dist",
-    "package.json"
+    "package.json",
+    "../../LICENSE",
+    "../../README.md",
+    "../../README_cn.md"
   ],
   "devDependencies": {
     "@jest/globals": "^29.7.0",
