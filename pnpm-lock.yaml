@@ -15,14 +15,14 @@ importers:
       zip-saver: workspace:*
     dependencies:
       vue: 3.5.12_typescript@5.6.3
-      zip-saver: link:../../packages/zip-stream
+      zip-saver: link:../../packages/zip-saver
     devDependencies:
       '@vitejs/plugin-vue': 5.1.4_vite@5.4.10+vue@3.5.12
       typescript: 5.6.3
       vite: 5.4.10
       vue-tsc: 2.1.6_typescript@5.6.3
 
-  packages/zip-stream:
+  packages/zip-saver:
     specifiers:
       '@jest/globals': ^29.7.0
       '@rollup/plugin-commonjs': ^26.0.1
